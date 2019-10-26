@@ -13,6 +13,9 @@
 		045F1C4723642B75004CB4E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045F1C4523642B75004CB4E1 /* Main.storyboard */; };
 		045F1C4923642B77004CB4E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045F1C4823642B77004CB4E1 /* Assets.xcassets */; };
 		045F1C4C23642B77004CB4E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045F1C4A23642B77004CB4E1 /* LaunchScreen.storyboard */; };
+		045F1C5423643606004CB4E1 /* ViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F1C5323643606004CB4E1 /* ViewControllerOne.swift */; };
+		045F1C5E23643B04004CB4E1 /* InvocationHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 045F1C5D23643B04004CB4E1 /* InvocationHandle.m */; };
+		045F1C6323643FE3004CB4E1 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F1C6223643FE3004CB4E1 /* ViewControllerTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		045F1C4823642B77004CB4E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045F1C4B23642B77004CB4E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045F1C4D23642B77004CB4E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045F1C5323643606004CB4E1 /* ViewControllerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerOne.swift; sourceTree = "<group>"; };
+		045F1C5523643659004CB4E1 /* OrientationDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OrientationDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		045F1C5C23643B04004CB4E1 /* InvocationHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvocationHandle.h; sourceTree = "<group>"; };
+		045F1C5D23643B04004CB4E1 /* InvocationHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvocationHandle.m; sourceTree = "<group>"; };
+		045F1C6223643FE3004CB4E1 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +64,18 @@
 		045F1C3E23642B75004CB4E1 /* OrientationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				045F1C3F23642B75004CB4E1 /* AppDelegate.swift */,
-				045F1C4123642B75004CB4E1 /* SceneDelegate.swift */,
-				045F1C4323642B75004CB4E1 /* ViewController.swift */,
 				045F1C4523642B75004CB4E1 /* Main.storyboard */,
 				045F1C4823642B77004CB4E1 /* Assets.xcassets */,
 				045F1C4A23642B77004CB4E1 /* LaunchScreen.storyboard */,
 				045F1C4D23642B77004CB4E1 /* Info.plist */,
+				045F1C5C23643B04004CB4E1 /* InvocationHandle.h */,
+				045F1C5D23643B04004CB4E1 /* InvocationHandle.m */,
+				045F1C5523643659004CB4E1 /* OrientationDemo-Bridging-Header.h */,
+				045F1C3F23642B75004CB4E1 /* AppDelegate.swift */,
+				045F1C4123642B75004CB4E1 /* SceneDelegate.swift */,
+				045F1C4323642B75004CB4E1 /* ViewController.swift */,
+				045F1C5323643606004CB4E1 /* ViewControllerOne.swift */,
+				045F1C6223643FE3004CB4E1 /* ViewControllerTwo.swift */,
 			);
 			path = OrientationDemo;
 			sourceTree = "<group>";
@@ -99,6 +112,7 @@
 				TargetAttributes = {
 					045F1C3B23642B75004CB4E1 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -140,7 +154,10 @@
 			files = (
 				045F1C4423642B75004CB4E1 /* ViewController.swift in Sources */,
 				045F1C4023642B75004CB4E1 /* AppDelegate.swift in Sources */,
+				045F1C5E23643B04004CB4E1 /* InvocationHandle.m in Sources */,
 				045F1C4223642B75004CB4E1 /* SceneDelegate.swift in Sources */,
+				045F1C5423643606004CB4E1 /* ViewControllerOne.swift in Sources */,
+				045F1C6323643FE3004CB4E1 /* ViewControllerTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OrientationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -292,8 +310,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cct.OrientationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OrientationDemo/OrientationDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OrientationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,8 +330,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cct.OrientationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OrientationDemo/OrientationDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
